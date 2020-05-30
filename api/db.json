@@ -1,0 +1,438 @@
+{
+  "activities": [
+    {
+      "id": 1,
+      "customerId": 2,
+      "activityName": "E Katalog",
+      "activityDate": "16.03.2020",
+      "duration": 8,
+      "explanation": "Katalog uygulaması için ek geliştirmeler yapıldı"
+    },
+    {
+      "id": 2,
+      "customerId": 1,
+      "activityName": "Teklif Karşılaştırma",
+      "activityDate": "17.03.2020",
+      "duration": 8,
+      "explanation": "TK ekranında düzenlemeler yapıldı. Css kodları eklendi"
+    },
+    {
+      "id": 4,
+      "customerId": 1,
+      "activityName": "Teklif Karşılaştırma",
+      "activityDate": "18.03.2020",
+      "duration": 8,
+      "explanation": "Onay uygulamasına eklenen TK ekranı için sayfa geçişleri düzenlendi. TK servisi geliştirmeleri yapıldı ve Fiori uygulamasında veriler çekilmeye başlandı"
+    },
+    {
+      "id": 5,
+      "customerId": 2,
+      "activityName": "Teklif Karşılaştırma",
+      "activityDate": "19.03.2020",
+      "duration": 8,
+      "explanation": "Fiori uygulamasında TK exceli indirme geliştirmeleri yapıldı"
+    },
+    {
+      "id": 6,
+      "customerId": 2,
+      "activityName": "Sözleşme Onayı",
+      "activityDate": "20.03.2020",
+      "duration": 8,
+      "explanation": "Sözleşme  onayı için fiori düzenlendi, servis te değişiklikler yapıldı"
+    },
+    {
+      "id": 7,
+      "customerId": 7,
+      "activityName": "Fiori",
+      "activityDate": "21.03.2020",
+      "duration": 8,
+      "explanation": "Fiori Ürün Gönderimleri uygulamasının geliştirmelerine başlandı"
+    },
+    {
+      "id": 8,
+      "customerId": 2,
+      "activityName": "Fiori",
+      "activityDate": "22.03.2020",
+      "duration": 8,
+      "explanation": "Fiori Ürün Gönderimleri uygulamasının geliştirmelerine devam edildi"
+    },
+    {
+      "id": 9,
+      "customerId": 4,
+      "activityName": "Sapma - Fiori",
+      "activityDate": "23.03.2020",
+      "duration": 8,
+      "explanation": "Sapma fiori projesinde hatalar düzeltmeleri ve gelen yeni talepler için geliştirmeler yapıldı"
+    },
+    {
+      "id": 10,
+      "customerId": 4,
+      "activityName": "Sapma - Fiori",
+      "activityDate": "24.03.2020",
+      "duration": 8,
+      "explanation": "Sapma fiori projesinde hatalar düzeltmeleri ve gelen yeni talepler için geliştirmeler yapıldı"
+    },
+    {
+      "id": 11,
+      "customerId": 4,
+      "activityName": "Sapma - Fiori",
+      "activityDate": "25.03.2020",
+      "duration": 8,
+      "explanation": "Sapma fiori projesinde hatalar düzeltmeleri ve gelen yeni talepler için geliştirmeler yapıldı"
+    },
+    {
+      "id": 12,
+      "customerId": 4,
+      "activityName": "Sapma - Fiori",
+      "activityDate": "26.03.2020",
+      "duration": 8,
+      "explanation": "Sapma fiori projesinde hatalar düzeltmeleri ve gelen yeni talepler için geliştirmeler yapıldı"
+    },
+    {
+      "id": 13,
+      "customerId": 8,
+      "activityName": "E Katalog",
+      "activityDate": "27.03.2020",
+      "duration": 8,
+      "explanation": "Katalog uygulaması için ek geliştirmeler ve bugfix yapıldı"
+    },
+    {
+      "id": 14,
+      "customerId": 7,
+      "activityName": "E Katalog",
+      "activityDate": "28.03.2020",
+      "duration": 8,
+      "explanation": "Katalog uygulaması için ek geliştirmeler ve bugfix yapıldı"
+    },
+    {
+      "id": 15,
+      "customerId": 2,
+      "activityName": "Fiori",
+      "activityDate": "29.03.2020",
+      "duration": 8,
+      "explanation": "Fiori uygulaması geliştirmelerine devam edildi"
+    },
+    {
+      "id": 16,
+      "customerId": 3,
+      "activityName": "WD - Teklif Raporu",
+      "activityDate": "30.03.2020",
+      "duration": 8,
+      "explanation": "Web dynpro  Malzeme Teklif Raporu geliştirmeleri yapıldı"
+    },
+    {
+      "id": 17,
+      "customerId": 6,
+      "activityName": "TK",
+      "activityDate": "01.04.2020",
+      "duration": 8,
+      "explanation": "ZSRM_BID_COMPARE uygulamasında düzenlemeler ve eklemeler yapıldı"
+    },
+    {
+      "id": 18,
+      "customerId": 8,
+      "activityName": "TK",
+      "activityDate": "02.04.2020",
+      "duration": 8,
+      "explanation": "ZSRM_BID_COMPARE uygulamasında düzenlemeler ve eklemeler yapıldı"
+    },
+    {
+      "id": 19,
+      "customerId": 3,
+      "activityName": "WD - Teklif Raporu",
+      "activityDate": "03.04.2020",
+      "duration": 8,
+      "explanation": "Web dynpro  Malzeme Teklif Raporu geliştirmeleri yapıldı"
+    },
+    {
+      "id": 20,
+      "customerId": 3,
+      "activityName": "TK",
+      "activityDate": "04.04.2020",
+      "duration": 8,
+      "explanation": "Zorlu sisteminden ZSRM_BID_COMPARE geliştirmeleri alındı"
+    },
+    {
+      "id": 21,
+      "customerId": 3,
+      "activityName": "TK - Katalog",
+      "activityDate": "05.04.2020",
+      "duration": 8,
+      "explanation": "Teklif Karşılaştırma Fiori uygulamasına ekleme çalışmaları yapıldı. Katalog uygulaması SRM sistemine eklendi"
+    },
+    {
+      "id": 22,
+      "customerId": 5,
+      "activityName": "Katalog",
+      "activityDate": "06.04.2020",
+      "duration": 8,
+      "explanation": "Web Dynpro Katalog uygulamasında geliştirmeler yapıldı"
+    },
+    {
+      "id": 23,
+      "customerId": 5,
+      "activityName": "Katalog",
+      "activityDate": "07.04.2020",
+      "duration": 8,
+      "explanation": "Web Dynpro Katalog uygulamasında geliştirmeler yapıldı"
+    },
+    {
+      "id": 24,
+      "customerId": 1,
+      "activityName": "E Katalog",
+      "activityDate": "08.04.2020",
+      "duration": 8,
+      "explanation": "Web Dynpro Katalog uygulamasında geliştirmeler yapıldı"
+    },
+    {
+      "id": 25,
+      "customerId": 3,
+      "activityName": "TK",
+      "activityDate": "09.04.2020",
+      "duration": 8,
+      "explanation": "Teklif Karşılaştırma Fiori uygulamasına ekleme çalışmaları yapıldı"
+    },
+    {
+      "id": 26,
+      "customerId": 3,
+      "activityName": "TK",
+      "activityDate": "10.04.2020",
+      "duration": 8,
+      "explanation": "Teklif Karşılaştırma Fiori uygulamasına ekleme çalışmaları yapıldı"
+    },
+    {
+      "id": 27,
+      "customerId": 3,
+      "activityName": "Katalog",
+      "activityDate": "11.04.2020",
+      "duration": 8,
+      "explanation": "Fiori Katalog uygulamasındaki eksikler ve çalışmayan bölümler düzeltildi"
+    },
+    {
+      "id": 28,
+      "customerId": 7,
+      "activityName": "Katalog",
+      "activityDate": "12.04.2020",
+      "duration": 8,
+      "explanation": "Fiori Katalog uygulamasındaki eksikler ve çalışmayan bölümler düzeltildi"
+    },
+    {
+      "id": 29,
+      "customerId": 6,
+      "activityName": "Teklif Karşılaştırma",
+      "activityDate": "13.04.2020",
+      "duration": 8,
+      "explanation": "TK servisi yazılmaya ve fiori ekranına veriler çekilmeye devam edildi"
+    },
+    {
+      "id": 30,
+      "customerId": 8,
+      "activityName": "Teklif Karşılaştırma",
+      "activityDate": "14.04.2020",
+      "duration": 8,
+      "explanation": "TK servisi yazılmaya ve fiori ekranına veriler çekilmeye devam edildi"
+    },
+    {
+      "id": 31,
+      "customerId": 4,
+      "activityName": "SRM",
+      "activityDate": "15.04.2020",
+      "duration": 8,
+      "explanation": "SRM geliştirmeleri yapıldı"
+    },
+    {
+      "id": 32,
+      "customerId": 4,
+      "activityName": "SRM",
+      "activityDate": "16.04.2020",
+      "duration": 8,
+      "explanation": "SRM geliştirmeleri yapıldı"
+    },
+    {
+      "id": 33,
+      "customerId": 4,
+      "activityName": "SRM",
+      "activityDate": "17.04.2020",
+      "duration": 8,
+      "explanation": "SRM geliştirmeleri yapıldı"
+    },
+    {
+      "id": 34,
+      "customerId": 1,
+      "activityName": "Fiori",
+      "activityDate": "18.04.2020",
+      "duration": 8,
+      "explanation": "Fiori arge çalışması yapıldı. Geçmişte yapılan uygulamalar github a eklendi eski olanlar güncellendi"
+    },
+    {
+      "id": 35,
+      "customerId": 1,
+      "activityName": "Fiori",
+      "activityDate": "19.04.2020",
+      "duration": 8,
+      "explanation": "Fiori arge çalışması yapıldı. Geçmişte yapılan uygulamalar github a eklendi eski olanlar güncellendi"
+    },
+    {
+      "id": 36,
+      "customerId": 8,
+      "activityName": "React.js",
+      "activityDate": "20.04.2020",
+      "duration": 8,
+      "explanation": "React  çalışmalarına devam edidi. Uygulama geliştirmesi yapılarak eğitime devam edildi"
+    },
+    {
+      "id": 37,
+      "customerId": 8,
+      "activityName": "React.js",
+      "activityDate": "21.04.2020",
+      "duration": 8,
+      "explanation": "React  çalışmalarına devam edidi. Uygulama geliştirmesi yapılarak eğitime devam edildi"
+    },
+    {
+      "id": 38,
+      "customerId": 1,
+      "activityName": "Katalog",
+      "activityDate": "22.04.2020",
+      "duration": 8,
+      "explanation": "Web Dynpro Katalog uygulamasında geliştirmeler yapıldı"
+    },
+    {
+      "id": 39,
+      "customerId": 1,
+      "activityName": "Katalog",
+      "activityDate": "24.04.2020",
+      "duration": 8,
+      "explanation": "Web Dynpro Katalog uygulamasında geliştirmeler yapıldı"
+    },
+    {
+      "id": 40,
+      "customerId": 8,
+      "activityName": "Mock Up - Fiori",
+      "activityDate": "25.04.2020",
+      "duration": 8,
+      "explanation": "Hata düzeltmeleri yapıldı. Uygulamada Tat dan gelen alanlar kapatıldı"
+    },
+    {
+      "id": 41,
+      "customerId": 8,
+      "activityName": "Fiori Katalog",
+      "activityDate": "26.04.2020",
+      "duration": 8,
+      "explanation": "Hata düzeltmeleri yapıldı. Uygulamada Tat dan gelen alanlar kapatıldı"
+    },
+    {
+      "id": 42,
+      "customerId": 5,
+      "activityName": "Fiori Katalog",
+      "activityDate": "27.04.2020",
+      "duration": 8,
+      "explanation": "ZSRM_CTR_MARKA alanı servise eklendi, bbp_pdisc tablosundan çekildi ve fioirde ZSRM_MARKA alanının yerine eklendi"
+    },
+    {
+      "id": 43,
+      "customerId": 1,
+      "activityName": "Fiori",
+      "activityDate": "28.04.2020",
+      "duration": 8,
+      "explanation": "Fiori  pdf viewer çalışması yapıldı"
+    },
+    {
+      "id": 44,
+      "customerId": 2,
+      "activityName": "SRM",
+      "activityDate": "29.04.2020",
+      "duration": 8,
+      "explanation": "SRM Geliştirmeleri"
+    },
+    {
+      "id": 45,
+      "customerId": 8,
+      "activityName": "Fiori",
+      "activityDate": "30.04.2020",
+      "duration": 8,
+      "explanation": "Fiori mock up uygulama yapıldı (Egemen Abi nin verdği şablona göre ilerlendi)"
+    },
+    {
+      "id": 46,
+      "customerId": 8,
+      "activityName": "Fiori",
+      "activityDate": "03.05.2020",
+      "duration": 8,
+      "explanation": "Fiori mock up uygulama yapıldı (Egemen Abi nin verdği şablona göre ilerlendi)"
+    },
+    {
+      "id": 47,
+      "customerId": 3,
+      "activityName": "Katalog",
+      "activityDate": "03.05.2020",
+      "duration": 8,
+      "explanation": "SRM Geliştirmeleri - Fiyatsız Katalog İşlemleri Web Dynpro"
+    },
+    {
+      "id": 48,
+      "customerId": 3,
+      "activityName": "Katalog",
+      "activityDate": "04.05.2020",
+      "duration": 8",
+      "explanation": "SRM Geliştirmeleri - Fiyatsız Katalog İşlemleri Web Dynpro"
+    },
+    {
+      "id": 49,
+      "customerId": 3,
+      "activityName": "Katalog",
+      "activityDate": "06.05.2020",
+      "duration": 8,
+      "explanation": "SRM Geliştirmeleri - Fiyatsız Katalog İşlemleri Web Dynpro"
+    },
+    {
+      "id": 50,
+      "customerId": 3,
+      "activityName": "Katalog",
+      "activityDate": "11.05.2020",
+      "duration": 8,
+      "explanation": "SRM Geliştirmeleri - Fiyatsız Katalog İşlemleri Web Dynpro"
+    }
+  ],
+  "customers": [
+    {
+      "id": 1,
+      "customerName": "Abdi İbrahim",
+      "seoUrl": "abdi-abrahim"
+    },
+    {
+      "id": 2,
+      "customerName": "Aksa",
+      "seoUrl": "aksa"
+    },
+    {
+      "id": 3,
+      "customerName": "Efes",
+      "seoUrl": "efes"
+    },
+    {
+      "id": 4,
+      "customerName": "Eti",
+      "seoUrl": "eti"
+    },
+    {
+      "id": 5,
+      "customerName": "Tat",
+      "seoUrl": "tat"
+    },
+    {
+      "id": 6,
+      "customerName": "Türk Telekom",
+      "seoUrl": "turk-telekom"
+    },
+    {
+      "id": 7,
+      "customerName": "Türk Trakör",
+      "seoUrl": "turk-traktor"
+    },
+    {
+      "id": 8,
+      "customerName": "Zorlu",
+      "seoUrl": "zorlu"
+    }
+  ]
+}
