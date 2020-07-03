@@ -1,0 +1,113 @@
+.Link {
+  text-decoration: underline;
+  color: #007bff !important;
+}
+
+.titleTop {
+  margin-top: 1rem;
+}
+
+.list-group .list-group-item:first-child {
+  border-top-left-radius: 1rem !important;
+  border-top-right-radius: 1rem !important;
+}
+
+.list-group .list-group-item:last-child {
+  border-bottom-right-radius: 1rem !important;
+  border-bottom-left-radius: 1rem !important;
+}
+
+.paddingBottom {
+  padding-bottom: 5%;
+}
+
+/*Not Found Page*/
+.center {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.borderRadius {
+  border-radius: 0.3rem !important;
+}
+
+/* Invalid Tooltip Position*/
+.invalid-tooltip {
+  position: initial !important;
+}
+
+/* Valid Tooltip Position*/
+.valid-tooltip {
+  position: initial !important;
+}
+
+/*DataTable Link*/
+.tableLink {
+  text-decoration: underline;
+  color: #007bff !important;
+  font-weight: bold;
+}
+
+/*PieCart*/
+.chart {
+  max-width: 300px;
+  margin-left: 60px;
+}
+
+@media only screen and (max-width: 600px) {
+  .titleMobile {
+    margin-top: 1.5rem;
+  }
+
+  .scroll {
+    overflow-x: hidden;
+  }
+  
+}
+
+/* Dashboard Menu Cards */
+.cascading-admin-card .admin-up {
+  margin-left: 4%;
+  margin-right: 4%;
+  margin-top: -20px;
+}
+
+.cascading-admin-card .admin-up .fa {
+  box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.2), 0 2px 13px 0 rgba(0, 0, 0, 0.19);
+}
+
+.cascading-admin-card .admin-up .fa {
+  padding: 1.3rem;
+  font-size: 2rem;
+  color: #fff;
+  text-align: left;
+  margin-right: 1rem;
+  border-radius: 3px;
+}
+
+.cascading-admin-card .admin-up .data {
+  float: right;
+  margin-top: 2rem;
+  text-align: right;
+}
+
+@media (max-width: 1199.98px) {
+  .card.cascading-admin-card {
+    margin-top: 2.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .card.cascading-admin-card {
+    margin-top: 2.5rem;
+  }
+}
+
+.cardTop {
+  margin-top: 12px !important;
+}
+/* Dashboard Menu Cards */

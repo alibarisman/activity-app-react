@@ -20,6 +20,7 @@ function AddOrUpdateActivity({
             getCustomers();
         }
         setActivity({ ...props.activity });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [props.activity]);
 
     function handleChange(event) {
@@ -107,7 +108,7 @@ function AddOrUpdateActivity({
     function handleSave(event) {
         event.preventDefault();
         saveActivity(activity).then(() => {
-            history.push("/");
+            history.push("/activity");
         });
     }
 
@@ -145,7 +146,4 @@ const mapDispatchToProps = {
     saveActivity
 };
 
-export default connect(
-    mapStateToProps,
-    mapDispatchToProps
-)(AddOrUpdateActivity);
+export default connect(mapStateToProps,mapDispatchToProps)(AddOrUpdateActivity);

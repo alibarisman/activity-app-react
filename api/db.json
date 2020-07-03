@@ -678,11 +678,11 @@
   "activities": [
     {
       "id": 1,
-      "customerId": 2,
       "activityName": "E Katalog",
+      "customerId": 5,
       "activityDate": "2020-03-16",
-      "duration": 8,
-      "explanation": "Katalog uygulaması için ek geliştirmeler yapıldı"
+      "duration": "18",
+      "explanation": "Katalog uygulaması için ek geliştirmeler yapılssaassas3444665"
     },
     {
       "id": 2,
@@ -1099,48 +1099,315 @@
       "duration": "789547",
       "explanation": "asassasasasasafdss sasas  asasaas  asassa   sasasa assasaaa sasassa assaasas sasasasa",
       "id": 58
+    },
+    {
+      "activityName": "sasasasaas2",
+      "customerId": 4,
+      "activityDate": "2020-06-26",
+      "duration": "3",
+      "explanation": "saassadsfdvcvcvcvvcbvvbnbvv",
+      "id": 59
+    },
+    {
+      "activityName": "sasasa",
+      "customerId": 2,
+      "activityDate": "2020-06-16",
+      "duration": "22",
+      "explanation": "saassaassasaasas",
+      "id": 60
+    },
+    {
+      "activityName": "3223dfdddffddffddffd",
+      "customerId": 3,
+      "activityDate": "2020-06-18",
+      "duration": "232323223",
+      "explanation": "ssddsxcxcasasweewewew",
+      "id": 61
+    },
+    {
+      "activityName": "ssaassdfd",
+      "customerId": 4,
+      "activityDate": "2020-06-24",
+      "duration": "3322332324331221",
+      "explanation": "saasaddfcxasxzzwqwqqqwqw",
+      "id": 62
+    },
+    {
+      "activityName": "Deneme Aktivite3333",
+      "customerId": 2,
+      "duration": "54",
+      "explanation": "deneme redux post",
+      "id": 63
+    },
+    {
+      "activityName": "sasasa",
+      "customerId": 3,
+      "activityDate": "2020-06-27",
+      "duration": "9",
+      "explanation": "2223sdasdadsadssad",
+      "id": 64
+    },
+    {
+      "activityName": "ASSASASAS",
+      "customerId": 8,
+      "activityDate": "2020-06-25",
+      "duration": "234",
+      "explanation": "123CDENEME 23",
+      "id": 65
+    },
+    {
+      "activityName": "E Katalog",
+      "customerId": 1,
+      "activityDate": "2020-03-16",
+      "duration": 8,
+      "explanation": "Katalog uygulaması için ek geliştirmeler yapılssaassasaa2306",
+      "id": 66
+    },
+    {
+      "activityName": "E Katalog",
+      "customerId": 1,
+      "activityDate": "2020-03-16",
+      "duration": 8,
+      "explanation": "Katalog uygulaması için ek geliştirmeler yapılssaassasaaSASAASSASAAS",
+      "id": 67
+    },
+    {
+      "id": 68,
+      "activityName": "sasaassasaas",
+      "customerId": 4,
+      "activityDate": "2020-06-27",
+      "duration": "2",
+      "explanation": "idisz deneme"
+    },
+    {
+      "id": 69,
+      "activityName": "assasasasdeneme",
+      "customerId": 6,
+      "activityDate": "2020-06-26",
+      "duration": "21121221",
+      "explanation": "deneem alertify"
+    },
+    {
+      "id": 70,
+      "activityName": "component reload deneme",
+      "customerId": 3,
+      "activityDate": "2020-06-25",
+      "duration": "aassaa32233223",
+      "explanation": "ddsdssdsdssdds"
+    },
+    {
+      "id": 71,
+      "activityName": "saasassaass",
+      "customerId": 7,
+      "activityDate": "2020-06-25",
+      "duration": "12211212",
+      "explanation": "denemealertify  25"
+    },
+    {
+      "id": 72,
+      "activityName": "12312312",
+      "customerId": 8,
+      "activityDate": "2020-06-18",
+      "duration": "123",
+      "explanation": "32132121"
+    },
+    {
+      "id": 73,
+      "activityName": "ssasasa",
+      "customerId": 4,
+      "activityDate": "2020-06-27",
+      "duration": "234",
+      "explanation": "saaassaa"
+    },
+    {
+      "id": 74,
+      "activityName": "asaas",
+      "customerId": 2,
+      "activityDate": "2020-06-18",
+      "duration": "saassa",
+      "explanation": "saassasa"
+    },
+    {
+      "id": 75,
+      "activityName": "343443",
+      "customerId": 5,
+      "activityDate": "2020-06-30",
+      "duration": "333232",
+      "explanation": "dssdsdd"
+    },
+    {
+      "id": 77,
+      "activityName": "sasaassa",
+      "customerId": 4,
+      "activityDate": "2020-06-24",
+      "duration": "23",
+      "explanation": "assassasaasasassasa"
+    },
+    {
+      "id": 78,
+      "activityName": "sasasa deneme enes",
+      "customerId": 3,
+      "activityDate": "2020-06-20",
+      "duration": "12",
+      "explanation": "sasassaasdenemeenes"
+    },
+    {
+      "activityName": "2211212121",
+      "customerId": 1,
+      "activityDate": "2020-07-03",
+      "duration": "2",
+      "explanation": "2222",
+      "id": 79
+    },
+    {
+      "id": 80,
+      "activityName": "21122112",
+      "customerId": 2,
+      "activityDate": "2020-07-17",
+      "duration": "22",
+      "explanation": "21212211221"
+    },
+    {
+      "id": 81,
+      "activityName": "75",
+      "customerId": 3,
+      "activityDate": "2020-08-04",
+      "duration": "saassasa",
+      "explanation": "ssasassa"
     }
   ],
   "customers": [
     {
       "id": 1,
       "customerName": "Abdi İbrahim",
+      "city": "İstanbul",
+      "status": "Active",
       "seoUrl": "abdi-abrahim"
     },
     {
       "id": 2,
       "customerName": "Aksa",
+      "city": "İstanbul",
+      "status": "Active",
       "seoUrl": "aksa"
     },
     {
       "id": 3,
       "customerName": "Efes",
+      "city": "İstanbul",
+      "status": "Active",
       "seoUrl": "efes"
     },
     {
       "id": 4,
       "customerName": "Eti",
+      "city": "İstanbul",
+      "status": "Active",
       "seoUrl": "eti"
     },
     {
       "id": 5,
       "customerName": "Tat",
+      "city": "İstanbul",
+      "status": "Active",
       "seoUrl": "tat"
     },
     {
       "id": 6,
       "customerName": "Türk Telekom",
+      "city": "İstanbul",
+      "status": "Active",
       "seoUrl": "turk-telekom"
     },
     {
       "id": 7,
-      "customerName": "Türk Trakör",
+      "customerName": "Türk Traktör",
+      "city": "Ankara",
+      "status": "Active",
       "seoUrl": "turk-traktor"
     },
     {
       "id": 8,
       "customerName": "Zorlu",
+      "city": "İstanbul",
+      "status": "Active",
       "seoUrl": "zorlu"
+    },
+    {
+      "id": 9,
+      "customerName": "1221112",
+      "city": "12121221",
+      "status": "Active"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "userName": "Arif Musa Erkılıç",
+      "email": "arifmusa.erkilic@ploud.com.tr",
+      "phone": "05555555555",
+      "password": "12312312",
+      "type": "admin",
+      "status": "Active"
+    },
+    {
+      "id": 2,
+      "userName": "Mehmet Moroğlu",
+      "email": "mehmet.moroglu@ploud.com.tr",
+      "phone": "05555555555",
+      "password": "12312312",
+      "type": "admin",
+      "status": "Active"
+    },
+    {
+      "id": 3,
+      "userName": "Barışcan Gezinci",
+      "email": "bariscan.gezinci@ploud.com.tr",
+      "phone": "05555555555",
+      "password": "12312312",
+      "type": "user",
+      "status": "Active"
+    },
+    {
+      "id": 4,
+      "userName": "İbrahim Keleş",
+      "email": "ibrahim.keles@ploud.com.tr",
+      "phone": "05555555555",
+      "password": "12312312",
+      "type": "user",
+      "status": "Active"
+    },
+    {
+      "id": 5,
+      "userName": "Ali Hulusi Barışman",
+      "email": "alihulusi.barisman@ploud.com.tr",
+      "phone": "05555555555",
+      "type": "user",
+      "status": "Active"
+    },
+    {
+      "id": 6,
+      "userName": "aassasa",
+      "email": "aaaa@aaa.com",
+      "phone": "05322323322",
+      "type": "admin",
+      "status": "Passive"
+    },
+    {
+      "id": 7,
+      "userName": "12121212",
+      "email": "assasaassa@aaas.com",
+      "phone": "2112211212",
+      "type": "admin",
+      "status": "Passive"
+    },
+    {
+      "id": 8,
+      "userName": "sasaas122",
+      "email": "aaaa@aa.c",
+      "phone": "saassasassasa",
+      "type": "admin",
+      "status": "Active"
     }
   ]
 }

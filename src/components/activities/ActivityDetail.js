@@ -1,5 +1,5 @@
 import React from 'react';
-import TextInput from '../toolbox/TextInput'
+import TextInput from '../toolbox/TextInput';
 import SelectInput from '../toolbox/SelectInput';
 
 const ActivityDetail = ({ customers, activity, onSave, onChange, errors }) => {
@@ -7,7 +7,8 @@ const ActivityDetail = ({ customers, activity, onSave, onChange, errors }) => {
     return (
         <div className="container">
             <form onSubmit={onSave} xs="6">
-                <h2>{activity.id ? "Update Activity" : "Add Activity"}</h2>
+                <h2 className="titleTop">{activity.id ? "Update Activity" : "Add Activity"}</h2>
+                <hr />
                 <TextInput
                     type="text"
                     name="activityName"

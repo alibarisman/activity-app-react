@@ -5,6 +5,7 @@ export function getActivitiesSuccess(activities) {
 }
 
 export function createActivitySuccess(activity) {
+    debugger;
     return { type: actionTypes.CREATE_ACTIVITY_SUCCESS, payload: activity }
 }
 
@@ -13,6 +14,7 @@ export function updateActivitySuccess(activity) {
 }
 
 export function saveActivityApi(activity) {
+    debugger;
     return fetch("http://localhost:3000/activities/" + (activity.id || ""), {
         method: activity.id ? "PUT" : "POST",
         headers: { "content-type": "application/json" },
@@ -23,6 +25,7 @@ export function saveActivityApi(activity) {
 }
 
 export function saveActivity(activity) {
+    debugger;
     return function (dispatch) {
         return saveActivityApi(activity).then(savedActivity => {
             activity.id
@@ -36,6 +39,7 @@ export function saveActivity(activity) {
 }
 
 export async function handleResponse(response){
+    debugger;
     if(response.ok){
       return response.json();
     }
@@ -60,7 +64,7 @@ export function getActivities(customerId) {
 
         return fetch(url)
             .then(response => response.json())
-            .then(result => dispatch(getActivitiesSuccess(result)))
+            .then(result => dispatch(getActivitiesSuccess(result)));
     }
 }
 

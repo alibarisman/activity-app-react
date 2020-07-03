@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/root/App';
 import * as serviceWorker from './serviceWorker';
+import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'alertifyjs/build/css/alertify.min.css';
 import "@fortawesome/fontawesome-free/css/all.min.css";

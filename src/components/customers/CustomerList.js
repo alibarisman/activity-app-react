@@ -4,6 +4,7 @@ import { bindActionCreators } from 'redux';
 import * as customerActions from '../../redux/actions/customerActions';
 import * as activityActions from '../../redux/actions/activityActions';
 import { ListGroup, ListGroupItem, Badge } from 'reactstrap';
+import Image from 'react-bootstrap/Image';
 
 class CustomerList extends Component {
 
@@ -20,19 +21,20 @@ class CustomerList extends Component {
         return (
             <div>
                 <h3><Badge color="warning">Customers ({this.props.customers.length})</Badge></h3>
-                <ListGroup>
+                <ListGroup >
                     {
                         this.props.customers.map(customer => (
                             <ListGroupItem
+                                tag="a"
+                                action
                                 key={customer.id}
-                                onClick={() => this.selectCustomer(customer)}
-                                active={customer.id === this.props.currentCustomer.id}>
-                                {customer.customerName}
+                                onClick={() => this.selectCustomer(customer)}>
+                                <Image width="60" height="40" src={ '../../logo/' + customer.customerName + '.png'} />
+                                {' '}{customer.customerName}
                             </ListGroupItem>
                         ))
                     }
                 </ListGroup>
-                {/* <h5>Selected Customer: {this.props.currentCustomer.customerName}</h5> */}
             </div>
         )
     }

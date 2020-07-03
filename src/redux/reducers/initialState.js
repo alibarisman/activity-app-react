@@ -2,5 +2,8 @@ export default {
     currentCustomer: {},
     customers: [],
     activities: [],
-    savedActivity: {}
+    users: [],
+    savedActivity: {},
+    savedCustomer: {},
+    savedUser: {}
 }

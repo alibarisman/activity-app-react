@@ -24,15 +24,15 @@ class Navi extends Component {
         <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
           <MDBNavbarNav left>
             <MDBNavItem>
-              <MDBNavLink to="/panel">Panel</MDBNavLink>
+              <MDBNavLink to="/dashboard">Dashboard</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>
               <MDBDropdown>
                 <MDBDropdownToggle nav caret>Activity
                 </MDBDropdownToggle>
                 <MDBDropdownMenu className="dropdown-default">
-                  <MDBDropdownItem tag={Link}  to="/saveactivity">Add Activity</MDBDropdownItem>
-                  <MDBDropdownItem tag={Link}  to="/activity">Activity List</MDBDropdownItem>
+                  <MDBDropdownItem><Link  to="/saveactivity">Add Activity</Link></MDBDropdownItem>
+                  <MDBDropdownItem><Link to="/activity">Activity List</Link></MDBDropdownItem>
                 </MDBDropdownMenu>
               </MDBDropdown>
             </MDBNavItem>
