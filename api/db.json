@@ -1194,86 +1194,6 @@
       "activityDate": "2020-06-25",
       "duration": "aassaa32233223",
       "explanation": "ddsdssdsdssdds"
-    },
-    {
-      "id": 71,
-      "activityName": "saasassaass",
-      "customerId": 7,
-      "activityDate": "2020-06-25",
-      "duration": "12211212",
-      "explanation": "denemealertify  25"
-    },
-    {
-      "id": 72,
-      "activityName": "12312312",
-      "customerId": 8,
-      "activityDate": "2020-06-18",
-      "duration": "123",
-      "explanation": "32132121"
-    },
-    {
-      "id": 73,
-      "activityName": "ssasasa",
-      "customerId": 4,
-      "activityDate": "2020-06-27",
-      "duration": "234",
-      "explanation": "saaassaa"
-    },
-    {
-      "id": 74,
-      "activityName": "asaas",
-      "customerId": 2,
-      "activityDate": "2020-06-18",
-      "duration": "saassa",
-      "explanation": "saassasa"
-    },
-    {
-      "id": 75,
-      "activityName": "343443",
-      "customerId": 5,
-      "activityDate": "2020-06-30",
-      "duration": "333232",
-      "explanation": "dssdsdd"
-    },
-    {
-      "id": 77,
-      "activityName": "sasaassa",
-      "customerId": 4,
-      "activityDate": "2020-06-24",
-      "duration": "23",
-      "explanation": "assassasaasasassasa"
-    },
-    {
-      "id": 78,
-      "activityName": "sasasa deneme enes",
-      "customerId": 3,
-      "activityDate": "2020-06-20",
-      "duration": "12",
-      "explanation": "sasassaasdenemeenes"
-    },
-    {
-      "activityName": "2211212121",
-      "customerId": 1,
-      "activityDate": "2020-07-03",
-      "duration": "2",
-      "explanation": "2222",
-      "id": 79
-    },
-    {
-      "id": 80,
-      "activityName": "21122112",
-      "customerId": 2,
-      "activityDate": "2020-07-17",
-      "duration": "22",
-      "explanation": "21212211221"
-    },
-    {
-      "id": 81,
-      "activityName": "75",
-      "customerId": 3,
-      "activityDate": "2020-08-04",
-      "duration": "saassasa",
-      "explanation": "ssasassa"
     }
   ],
   "customers": [
@@ -1332,12 +1252,6 @@
       "city": "İstanbul",
       "status": "Active",
       "seoUrl": "zorlu"
-    },
-    {
-      "id": 9,
-      "customerName": "1221112",
-      "city": "12121221",
-      "status": "Active"
     }
   ],
   "users": [
@@ -1383,30 +1297,6 @@
       "email": "alihulusi.barisman@ploud.com.tr",
       "phone": "05555555555",
       "type": "user",
-      "status": "Active"
-    },
-    {
-      "id": 6,
-      "userName": "aassasa",
-      "email": "aaaa@aaa.com",
-      "phone": "05322323322",
-      "type": "admin",
-      "status": "Passive"
-    },
-    {
-      "id": 7,
-      "userName": "12121212",
-      "email": "assasaassa@aaas.com",
-      "phone": "2112211212",
-      "type": "admin",
-      "status": "Passive"
-    },
-    {
-      "id": 8,
-      "userName": "sasaas122",
-      "email": "aaaa@aa.c",
-      "phone": "saassasassasa",
-      "type": "admin",
       "status": "Active"
     }
   ]
