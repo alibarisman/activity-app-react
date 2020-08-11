@@ -1,29 +1,43 @@
 import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { getCustomers } from "../../redux/actions/customerActions";
+import { getProjects } from "../../redux/actions/projectActions"
 import { saveActivity } from "../../redux/actions/activityActions";
 import ActivityDetail from "./ActivityDetail";
 
 function AddOrUpdateActivity({
     activities,
     customers,
+    projects,
     getActivities,
     getCustomers,
+    getProjects,
     saveActivity,
     history,
     ...props
 }) {
     const [activity, setActivity] = useState({ ...props.activity });
     const [errors, setErrors] = useState({});
+    const [projectList, setProjectList] = useState([]);
+    
     useEffect(() => {
         if (customers.length === 0) {
             getCustomers();
+        }
+        if(projects.length === 0) {
+            getProjects();
         }
         setActivity({ ...props.activity });
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [props.activity]);
 
     function handleChange(event) {
+
+        if(event.target.name === "customerId") {
+            let projectList = projects.filter(projectList => projectList.customerId === Number(event.target.value)) || null;
+            setProjectList(projectList);
+        }
+
         const { name, value } = event.target;
         setActivity(previousActivity => ({
             ...previousActivity,
@@ -31,6 +45,7 @@ function AddOrUpdateActivity({
         }));
 
         validate(name, value);
+        
     }
 
     function validate(name, value) {
@@ -61,6 +76,19 @@ function AddOrUpdateActivity({
                     }));
                 }
                 break;
+            case "projectId":
+                if (name === "projectId" && value === "") {
+                    setErrors(previousErrors => ({
+                        ...previousErrors,
+                        projectId: "Proje seçilmelidir."
+                    }));
+                } else {
+                    setErrors(previousErrors => ({
+                        ...previousErrors,
+                        projectId: ""
+                        }));
+                    }
+                    break;
             case "activityDate":
                 if (name === "activityDate" && value === "") {
                     setErrors(previousErrors => ({
@@ -116,6 +144,7 @@ function AddOrUpdateActivity({
         <ActivityDetail
             activity={activity}
             customers={customers}
+            projects={projectList}
             onChange={handleChange}
             onSave={handleSave}
             errors={errors}
@@ -137,12 +166,14 @@ function mapStateToProps(state, ownProps) {
     return {
         activity,
         activities: state.activityListReducer,
-        customers: state.customerListReducer
+        customers: state.customerListReducer,
+        projects: state.projectListReducer
     };
 }
 
 const mapDispatchToProps = {
     getCustomers,
+    getProjects,
     saveActivity
 };
 

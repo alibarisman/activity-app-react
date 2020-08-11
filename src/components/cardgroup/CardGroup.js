@@ -5,7 +5,7 @@ import { bindActionCreators } from 'redux';
 import * as activityActions from '../../redux/actions/activityActions';
 import * as userActions from '../../redux/actions/userActions';
 import * as customerActions from '../../redux/actions/customerActions';
-import initialState from '../../redux/reducers/initialState';
+import * as projectActions from '../../redux/actions/projectActions';
 import { Button } from 'reactstrap';
 import { MDBCard, MDBCardBody, MDBRow, MDBCol, MDBIcon } from "mdbreact";
 
@@ -15,13 +15,8 @@ class CardGroup extends Component {
         this.props.actions.getActivities();
         this.props.actions.getUsers();
         this.props.actions.getCustomers();
+        this.props.actions.getProjects();
     }
-
-    state = {
-        activities: initialState.activities.length,
-        users: initialState.users.length,
-        customers: initialState.customers.length
-    };
 
     render() {
         return (
@@ -75,6 +70,23 @@ class CardGroup extends Component {
                             </MDBCardBody>
                         </MDBCard>
                     </MDBCol>
+
+                    <MDBCol xl="4" md="4" className="mb-r cardTop">
+                        <MDBCard style={{ marginLeft: 60, marginTop: 20 }} className="cascading-admin-card">
+                            <div className="admin-up">
+                                <MDBIcon icon="copy" className="red accent-2" />
+                                <div className="data">
+                                    <h5>PROJECTS</h5>
+                                    <h4>
+                                        <strong>{this.props.projects.length}</strong>
+                                    </h4>
+                                </div>
+                            </div>
+                            <MDBCardBody>
+                                <Button color="info" tag={Link} to={'/projects'} size="md">See Details</Button>
+                            </MDBCardBody>
+                        </MDBCard>
+                    </MDBCol>
                 </MDBRow>
             </div>
         )
@@ -85,7 +97,8 @@ function mapStateToProps(state) {
     return {
         activities: state.activityListReducer,
         users: state.userListReducer,
-        customers: state.customerListReducer
+        customers: state.customerListReducer,
+        projects: state.projectListReducer
     }
 }
 
@@ -95,6 +108,7 @@ function mapDispatchToProps(dispatch) {
             getActivities: bindActionCreators(activityActions.getActivities, dispatch),
             getUsers: bindActionCreators(userActions.getUsers, dispatch),
             getCustomers: bindActionCreators(customerActions.getCustomers, dispatch),
+            getProjects: bindActionCreators(projectActions.getProjects, dispatch)
         }
     }
 }

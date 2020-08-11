@@ -2,7 +2,7 @@ import React from 'react';
 import TextInput from '../toolbox/TextInput';
 import SelectInput from '../toolbox/SelectInput';
 
-const ActivityDetail = ({ customers, activity, onSave, onChange, errors }) => {
+const ActivityDetail = ({ customers, projects, activity, onSave, onChange, errors }) => {
     
     return (
         <div className="container">
@@ -21,13 +21,25 @@ const ActivityDetail = ({ customers, activity, onSave, onChange, errors }) => {
                     name="customerId"
                     label="Customer"
                     value={activity.customerId || ""}
-                    defaultOption="Select"
+                    defaultOption="Select Customer"
                     options={customers.map(customer => ({
                         value: customer.id,
                         text: customer.customerName
                     }))}
                     onChange={onChange}
                     error={errors.customerId} />
+                <SelectInput
+                    type="text"
+                    name="projectId"
+                    label="Project"
+                    value={activity.projectId || ""}
+                    defaultOption="Select Project"
+                    options={projects.map(project => ({
+                        value: project.id,
+                        text: project.projectName
+                    }))}
+                    onChange={onChange}
+                    error={errors.projectId} />
                 <TextInput
                     type="date"
                     name="activityDate"

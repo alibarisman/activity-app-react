@@ -201,7 +201,7 @@ class UserList extends Component {
                         <Col xs="10">
                             <h2 className="titleTop">User List</h2>
                             <hr />
-                            <Button className="borderRadius" color='success' onClick={this.handleOpenModal}>Add User Modal</Button>
+                            <Button className="borderRadius" color='warning' onClick={this.handleOpenModal}>Add User</Button>
                             <Modal isOpen={this.state.modal} className={this.props.className}>
                                 <ModalHeader toggle={this.handleCloseModal}>{this.state.modalTitle}</ModalHeader>
                                 <ModalBody>

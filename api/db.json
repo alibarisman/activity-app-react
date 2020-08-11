@@ -1175,6 +1175,7 @@
       "id": 68,
       "activityName": "sasaassasaas",
       "customerId": 4,
+      "projectId": 1,
       "activityDate": "2020-06-27",
       "duration": "2",
       "explanation": "idisz deneme"
@@ -1183,6 +1184,7 @@
       "id": 69,
       "activityName": "assasasasdeneme",
       "customerId": 6,
+      "projectId": 5,
       "activityDate": "2020-06-26",
       "duration": "21121221",
       "explanation": "deneem alertify"
@@ -1298,6 +1300,126 @@
       "phone": "05555555555",
       "type": "user",
       "status": "Active"
+    },
+    {
+      "id": 6,
+      "userName": "Ali Hulusi",
+      "email": "alihulusi1995@gmail.com",
+      "phone": "",
+      "type": "user",
+      "status": "Active"
+    },
+    {
+      "id": 7,
+      "userName": "Ali Hulusi Barışman",
+      "email": "bbarisman@gmail.com",
+      "phone": "",
+      "type": "user",
+      "status": "Active"
+    },
+    {
+      "id": 8,
+      "userName": "assasa",
+      "email": "alihulusi1995@gmail.com",
+      "phone": "",
+      "type": "user",
+      "status": "Active"
+    },
+    {
+      "id": 9,
+      "userName": "sasassa",
+      "email": "alihulusi.barisman@gmail.com",
+      "phone": "",
+      "type": "user",
+      "status": "Active"
+    },
+    {
+      "id": 10,
+      "userName": "Ali Hulusi",
+      "email": "alihulusi.barisman@gmail.com",
+      "phone": "",
+      "type": "user",
+      "status": "Active"
+    },
+    {
+      "id": 11,
+      "userName": "Ali Hulusi",
+      "email": "assasaassa@aaas.com",
+      "phone": "",
+      "type": "user",
+      "status": "Active"
+    },
+    {
+      "id": 12,
+      "userName": "Ali Hulusi",
+      "email": "alihulusi1995@gmail.com",
+      "phone": "05326551040",
+      "type": "user",
+      "status": "Active"
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "projectName": "SRM Projesi",
+      "customerId": 3,
+      "city": "İstanbul",
+      "sector": "Alkol",
+      "status": "Active"
+    },
+    {
+      "id": 2,
+      "projectName": "Fiori Projesi",
+      "customerId": 5,
+      "city": "Ankara",
+      "sector": "Sector",
+      "status": "Active"
+    },
+    {
+      "id": 3,
+      "customerId": 6,
+      "projectName": "Deneme4",
+      "city": "İstanbul",
+      "sector": "Telekomünikasyon",
+      "status": "Active"
+    },
+    {
+      "id": 4,
+      "projectName": "sas",
+      "customerId": 2,
+      "city": "asasasaass",
+      "sector": "saa",
+      "status": "Active"
+    },
+    {
+      "id": 5,
+      "projectName": "asd",
+      "customerId": 6,
+      "city": "sa",
+      "sector": "sa",
+      "status": "Passive"
+    },
+    {
+      "id": 6,
+      "customerId": 6,
+      "projectName": "Deneme4",
+      "city": "İstanbul",
+      "sector": "Telekomünikasyon",
+      "status": "Active"
+    }
+  ],
+  "auths": [
+    {
+      "id": 1,
+      "userId": 2,
+      "authCode": "CUSTOMER",
+      "authType": "DISPLAY"
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "authCode": "PROJECT",
+      "authType": "EDIT"
     }
   ]
 }

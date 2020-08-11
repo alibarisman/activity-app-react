@@ -9,9 +9,8 @@ import Login from '../common/Login';
 import Dashboard from '../dashboard/Home';
 import Activities from '../dashboard/Activities';
 import Customers from '../dashboard/Customers';
+import Projects from '../dashboard/Projects';
 import UserList from '../dashboard/Users';
-import Datatable from '../dashboard/Datatable';
-import UploadAws from '../dashboard/UploadAws';
 import NotFound from '../common/NotFound';
 
 function App() {
@@ -29,8 +28,7 @@ function App() {
         <Route path="/activities" component={Activities} />
         <Route path="/customers" component={Customers} />
         <Route path="/users" component={UserList} />
-        <Route path="/datatable" component={Datatable} />
-        <Route path="/uploadaws" component={UploadAws} />
+        <Route path="/projects" component={Projects} />
         <Route component={NotFound} />
       </Switch>
     </div>

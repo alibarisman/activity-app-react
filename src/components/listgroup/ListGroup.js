@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as activityActions from '../../redux/actions/activityActions';
 import * as customerActions from '../../redux/actions/customerActions';
-import initialState from '../../redux/reducers/initialState';
 
 class List extends Component {
 
@@ -12,11 +11,6 @@ class List extends Component {
         this.props.actions.getActivities();
         this.props.actions.getCustomers();
     }
-
-    state = {
-        activities: initialState.activities.length,
-        customers: initialState.customers.length
-    };
 
     render() {
         return (

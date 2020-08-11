@@ -1,25 +1,49 @@
 import React, { Component } from 'react';
-import {
-  MDBContainer,
-  MDBCol,
-  MDBBtn,
-  MDBRow
-} from 'mdbreact';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import * as userActions from '../../redux/actions/userActions';
+import { MDBContainer, MDBCol, MDBBtn, MDBRow } from 'mdbreact';
 import Footer from '../footer/Footer';
+import alertify from 'alertifyjs';
 
 class Register extends Component {
 
-  state = {
-    name: "",
-    email: "",
-    password: "",
-    type: "user",
-    status: "Active"
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: "",
+      email: "",
+      phone: "",
+      password: "",
+      type: "user",
+      status: "Active"
+    };
   };
 
   submitHandler = event => {
+    
+    debugger;
     event.preventDefault();
     event.target.className += " was-validated";
+
+    if (this.state.email === "" || this.state.name === "" || this.state.password === "") {
+      return;
+    }
+
+    const user = {
+      id: "",
+      userName: this.state.name,
+      email: this.state.email,
+      phone: this.state.phone,
+      type: this.state.type,
+      status: this.state.status
+    }
+
+    this.props.actions.saveUser(user).then(() => {
+      alertify.alert('Successful', 'The user has been successfully saved');
+      this.props.history.push('/login');
+
+    });
   };
 
   changeHandler = event => {
@@ -103,4 +127,30 @@ class Register extends Component {
   }
 }
 
-export default Register;
+export function getUserById(users, userId) {
+  let user = users.find(user => user.id === Number(userId)) || null;
+  return user;
+}
+
+function mapStateToProps(state, ownProps) {
+  const userId = ownProps.match.params.userId;
+  const user =
+    userId && state.userListReducer.length > 0
+      ? getUserById(state.userListReducer, userId)
+      : {};
+  return {
+    user,
+    users: state.userListReducer
+  }
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    actions: {
+      getUsers: bindActionCreators(userActions.getUsers, dispatch),
+      saveUser: bindActionCreators(userActions.saveUser, dispatch)
+    }
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Register);

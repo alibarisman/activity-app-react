@@ -1,59 +1,61 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import * as projectActions from '../../redux/actions/projectActions';
 import * as customerActions from '../../redux/actions/customerActions';
 import { Container, Button, Col, Row, Modal, ModalHeader, ModalBody } from 'reactstrap';
 import { MDBDataTableV5, MDBIcon } from 'mdbreact';
-import Image from 'react-bootstrap/Image';
 import SideNav from '../sidenav/SideNav';
-import CustomerModal from '../modals/CustomerModal';
+import ProjectModal from '../modals/ProjectModal';
 import alertify from "alertifyjs";
 
-class Customers extends Component {
+class Projects extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
             tabledata: '',
-            modalTitle: 'Add Customer',
+            modalTitle: 'Add Project',
             id: '',
-            name: '',
-            logo: '',
+            projectName:'',
+            customerId: '',
             city: '',
-            status: ''
+            sector: '',
+            status: '',
         };
 
         this.handleOpenModal = this.handleOpenModal.bind(this);
         this.handleCloseModal = this.handleCloseModal.bind(this);
-    }
+    };
 
     tableColumns = [
         {
-            label: 'Company Id',
+            label: 'Project Id',
             field: 'id',
             attributes: {
                 'aria-controls': 'DataTable',
                 'aria-label': 'Id'
-            }
+            },
         },
         {
             label: 'Edit',
             field: 'edit'
         },
         {
-            label: 'Logo',
-            field: 'logo'
-
+            label: 'Project Name',
+            field: 'projectName'
         },
         {
-            label: 'Company Name',
-            field: 'customerName'
-
+            label: 'Customer',
+            field: 'customerId'
         },
         {
             label: 'City',
             field: 'city'
-
+        },
+        {
+            label: 'Sector',
+            field: 'sector'
         },
         {
             label: 'Status',
@@ -65,24 +67,26 @@ class Customers extends Component {
         this.setState({ modal: true });
 
         if (!isNaN(id)) {
-            let customer = this.props.customers.find(customer => customer.id === id);
-
+            let project = this.props.projects.find(project => project.id === id);
+            debugger;
             this.setState({
-                modalTitle: 'Update Customer',
-                id: customer.id,
-                name: customer.customerName,
-                // logo: customer.logo,
-                city: customer.city,
-                status: customer.status
+                modalTitle: 'Update Project',
+                id: project.id,
+                projectName: project.projectName,
+                customerId: project.customerId,
+                city: project.city,
+                sector: project.sector,
+                status: project.status
             });
         }
         else {
             this.setState({
-                modalTitle: 'Add Customer',
+                modalTitle: 'Add Project',
                 id: '',
-                name: '',
-                // logo: '',
+                projectName: '',
+                customerId: '',
                 city: '',
+                sector: '',
                 status: ''
             });
         }
@@ -93,52 +97,48 @@ class Customers extends Component {
     }
 
     changeHandler = event => {
-        debugger;
         this.setState({ [event.target.name]: event.target.value });
-
-        if (event.target.name === "logo") {
-            const logo = event.target.files[0];
-            console.log(logo);
-
-        }
     };
 
     submitHandler = event => {
         event.preventDefault();
         event.target.className += " was-validated";
 
-        if (this.state.name === "" || this.state.city === "" || this.state.status === "") {
+        if (this.state.projectName === "" || this.state.customerId === "" || this.state.city === "" || this.state.sector === "" || this.state.status === "") {
             return;
         }
 
-        const customer = {
+        const project = {
             id: this.state.id,
-            customerName: this.state.name,
+            projectName: this.state.projectName,
+            customerId: parseInt(this.state.customerId),
             city: this.state.city,
+            sector: this.state.sector,
             status: this.state.status
         }
 
-        this.props.actions.saveCustomer(customer).then(() => {
-            this.props.actions.getCustomers();
+        this.props.actions.saveProject(project).then(() => {
+            this.props.actions.getProjects();
         });
 
         this.handleCloseModal();
-        alertify.alert('Successful', 'The customer has been successfully saved');
+        alertify.alert('Successful', 'The project has been successfully saved');
 
-        if (this.props.customers.length > 0) {
+        if (this.props.projects.length > 0) {
             const tableRows = []
 
-            for (let i = 0; i < this.props.customers.length; i++) {
+            for (let i = 0; i < this.props.projects.length; i++) {
 
-                let id = this.props.customers[i].id;
+                let id = this.props.projects[i].id;
 
                 const tableRow = {
                     edit: <Button size="sm" style={{ borderRadius: 24 }} color="primary" onClick={() => this.handleOpenModal(id)}><MDBIcon icon="edit" />Edit</Button>,
-                    id: this.props.customers[i].id,
-                    logo: <Image style={{ cursor: 'pointer' }} onClick={this.onClickImage} width="50" height="50" src={'../../logo/' + this.props.customers[i].customerName + '.png'} thumbnail />,
-                    customerName: this.props.customers[i].customerName,
-                    city: this.props.customers[i].city,
-                    status: this.props.customers[i].status,
+                    id: this.props.projects[i].id,
+                    projectName: this.props.projects[i].projectName,
+                    customerId: this.props.projects[i].customerId,
+                    city: <p style={{ width: 100 }}>{this.props.projects[i].city}</p>,
+                    sector: this.props.projects[i].sector,
+                    status: this.props.projects[i].status
                 }
 
                 tableRows.push(tableRow);
@@ -153,27 +153,30 @@ class Customers extends Component {
             this.state.tabledata = datatable
         }
 
-    }
+    };
 
     componentDidMount() {
         this.props.actions.getCustomers();
+        this.props.actions.getProjects();
     }
 
     render() {
-        if (this.props.customers.length > 0) {
-            const tableRows = []
+        if (this.props.projects.length > 0) {
+            const tableRows = [];
 
-            for (let i = 0; i < this.props.customers.length; i++) {
+            for (let i = 0; i < this.props.projects.length; i++) {
 
-                let id = this.props.customers[i].id;
-
+                let id = this.props.projects[i].id;
+                let customer = this.props.customers.find(customer => customer.id === this.props.projects[i].customerId) || null;
+                debugger;
                 const tableRow = {
                     edit: <Button size="sm" style={{ borderRadius: 24 }} color="primary" onClick={() => this.handleOpenModal(id)}><MDBIcon icon="edit" />Edit</Button>,
-                    id: this.props.customers[i].id,
-                    logo: <Image style={{ cursor: 'pointer' }} onClick={this.onClickImage} width="50" height="50" src={'../../logo/' + this.props.customers[i].customerName + '.png'} thumbnail />,
-                    customerName: this.props.customers[i].customerName,
-                    city: this.props.customers[i].city,
-                    status: this.props.customers[i].status,
+                    id: this.props.projects[i].id,
+                    projectName: this.props.projects[i].projectName,
+                    customerId: this.props.projects[i].customerId + " - " + customer.customerName,
+                    city: this.props.projects[i].city,
+                    sector: this.props.projects[i].sector,
+                    status: this.props.projects[i].status
                 }
 
                 tableRows.push(tableRow);
@@ -195,17 +198,20 @@ class Customers extends Component {
                     <Row>
                         <Col xs="2"></Col>
                         <Col xs="10">
-                            <h2 className="titleTop">Customer List</h2>
+                            <h2 className="titleTop">Project List</h2>
                             <hr />
-                            <Button className="borderRadius" color='info' onClick={this.handleOpenModal}>Add Customer</Button>
+                            <Button className="borderRadius" color='danger' onClick={this.handleOpenModal}>Add Project</Button>
                             <Modal isOpen={this.state.modal} className={this.props.className}>
                                 <ModalHeader toggle={this.handleCloseModal}>{this.state.modalTitle}</ModalHeader>
                                 <ModalBody>
-                                    <CustomerModal
-                                        name={this.state.name}
-                                        logo={this.state.logo}
+                                    <ProjectModal
+                                        id={this.state.id}
+                                        projectName={this.state.projectName}
+                                        customerId={this.state.customerId}
                                         city={this.state.city}
+                                        sector={this.state.sector}
                                         status={this.state.status}
+                                        customers={this.props.customers}
                                         submitHandler={this.submitHandler}
                                         changeHandler={this.changeHandler} />
                                 </ModalBody>
@@ -230,20 +236,21 @@ class Customers extends Component {
     }
 }
 
-export function getCustomerById(customers, customerId) {
-    let customer = customers.find(customer => customer.id === Number(customerId)) || null;
-    return customer;
+export function getProjectById(projects, projectId) {
+    let project = projects.find(project => project.id === Number(projectId)) || null;
+    return project;
 }
 
 function mapStateToProps(state, ownProps) {
-    const customerId = ownProps.match.params.customerId;
-    const customer =
-        customerId && state.customerListReducer.length > 0
-            ? getCustomerById(state.customerListReducer, customerId)
+    const projectId = ownProps.match.params.projectId;
+    const project =
+        projectId && state.projectListReducer.length > 0
+            ? getProjectById(state.projectListReducer, projectId)
             : {};
     return {
-        customer,
-        customers: state.customerListReducer
+        project,
+        customers: state.customerListReducer,
+        projects: state.projectListReducer
     }
 }
 
@@ -251,9 +258,10 @@ function mapDispatchToProps(dispatch) {
     return {
         actions: {
             getCustomers: bindActionCreators(customerActions.getCustomers, dispatch),
-            saveCustomer: bindActionCreators(customerActions.saveCustomer, dispatch)
+            getProjects: bindActionCreators(projectActions.getProjects, dispatch),
+            saveProject: bindActionCreators(projectActions.saveProject, dispatch)
         }
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Customers);
+export default connect(mapStateToProps, mapDispatchToProps)(Projects);

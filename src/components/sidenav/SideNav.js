@@ -31,19 +31,25 @@ class Sidenav extends Component {
               </NavIcon>
               <NavText style={{ fontSize: 15 }}><strong>Activity List</strong></NavText>
             </NavItem>
-            <NavItem eventKey="users">
-              <NavIcon>
-                <i className="fas fa-tachometer-alt" style={{ fontSize: '1.75em' }} />
-              </NavIcon>
-              <NavText style={{ fontSize: 15 }}><strong>User List</strong></NavText>
-            </NavItem>
             <NavItem eventKey="customers">
               <NavIcon>
                 <i className="fas fa-tachometer-alt" style={{ fontSize: '1.75em' }} />
               </NavIcon>
               <NavText style={{ fontSize: 15 }}><strong>Customer List</strong></NavText>
             </NavItem>
-            <NavItem eventKey="datatable">
+            <NavItem eventKey="projects">
+              <NavIcon>
+                <i className="fas fa-tachometer-alt" style={{ fontSize: '1.75em' }} />
+              </NavIcon>
+              <NavText style={{ fontSize: 15 }}><strong>Project List</strong></NavText>
+            </NavItem>
+            <NavItem eventKey="users">
+              <NavIcon>
+                <i className="fas fa-tachometer-alt" style={{ fontSize: '1.75em' }} />
+              </NavIcon>
+              <NavText style={{ fontSize: 15 }}><strong>User List</strong></NavText>
+            </NavItem>
+            {/* <NavItem eventKey="datatable">
               <NavIcon>
                 <i className="fas fa-tachometer-alt" style={{ fontSize: '1.75em' }} />
               </NavIcon>
@@ -54,7 +60,7 @@ class Sidenav extends Component {
                 <i className="fas fa-tachometer-alt" style={{ fontSize: '1.75em' }} />
               </NavIcon>
               <NavText style={{ fontSize: 15 }}><strong>Upload Aws</strong></NavText>
-            </NavItem>
+            </NavItem> */}
           </SideNav.Nav>
         </SideNav>
       </div>

@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as activityActions from '../../redux/actions/activityActions';
 import * as customerActions from '../../redux/actions/customerActions';
+import * as projectActions from '../../redux/actions/projectActions';
 import { Container, Button, Col, Row, Modal, ModalHeader, ModalBody } from 'reactstrap';
 import { MDBDataTableV5, MDBIcon } from 'mdbreact';
 import SideNav from '../sidenav/SideNav';
@@ -19,9 +20,11 @@ class Activities extends Component {
             id: '',
             name: '',
             customer: '',
+            project: '',
             date: '',
             duration: '',
-            explanation: ''
+            explanation: '',
+            projects: []
         };
 
         this.handleOpenModal = this.handleOpenModal.bind(this);
@@ -34,31 +37,30 @@ class Activities extends Component {
             field: 'id',
             attributes: {
                 'aria-controls': 'DataTable',
-                'aria-label': 'Id',
+                'aria-label': 'Id'
             },
         },
         {
             label: 'Edit',
-            field: 'edit',
+            field: 'edit'
         },
         {
             label: 'Activity Name',
-            field: 'activityName',
+            field: 'activityName'
 
         },
         {
             label: 'Activity Date',
-            field: 'activityDate',
-
+            field: 'activityDate'
         },
         {
             label: 'Duration',
-            field: 'duration',
+            field: 'duration'
 
         },
         {
             label: 'Explanation',
-            field: 'explanation',
+            field: 'explanation'
         }
     ];
 
@@ -67,16 +69,20 @@ class Activities extends Component {
 
         if (!isNaN(id)) {
             let activity = this.props.activities.find(activity => activity.id === id);
-
+            debugger;
             this.setState({
                 modalTitle: 'Update Activity',
                 id: activity.id,
                 name: activity.activityName,
                 customer: activity.customerId,
+                project: activity.projectId,
                 date: activity.activityDate,
                 duration: activity.duration,
-                explanation: activity.explanation
+                explanation: activity.explanation,
             });
+
+            let projectList = this.props.projects.filter(projects => projects.id === activity.projectId) || null;
+            this.setState({ projects: projectList });
         }
         else {
             this.setState({
@@ -84,6 +90,7 @@ class Activities extends Component {
                 id: '',
                 name: '',
                 customer: '',
+                project: '',
                 date: '',
                 duration: '',
                 explanation: ''
@@ -97,6 +104,11 @@ class Activities extends Component {
 
     changeHandler = event => {
         this.setState({ [event.target.name]: event.target.value });
+        
+        if(event.target.name === "customer") {
+            let projectList = this.props.projects.filter(projects => projects.customerId === Number(event.target.value)) || null;
+            this.setState({ projects: projectList });
+        }
     };
 
     submitHandler = event => {
@@ -111,6 +123,7 @@ class Activities extends Component {
             id: this.state.id,
             activityName: this.state.name,
             customerId: parseInt(this.state.customer),
+            projectId: parseInt(this.state.project),
             activityDate: this.state.date,
             duration: this.state.duration,
             explanation: this.state.explanation
@@ -156,6 +169,7 @@ class Activities extends Component {
     componentDidMount() {
         this.props.actions.getActivities();
         this.props.actions.getCustomers();
+        this.props.actions.getProjects();
     }
 
     render() {
@@ -196,7 +210,7 @@ class Activities extends Component {
                         <Col xs="10">
                             <h2 className="titleTop">Activity List</h2>
                             <hr />
-                            <Button className="borderRadius" color='primary' onClick={this.handleOpenModal}>Add Activity Modal</Button>
+                            <Button className="borderRadius" color='primary' onClick={this.handleOpenModal}>Add Activity</Button>
                             <Modal isOpen={this.state.modal} className={this.props.className}>
                                 <ModalHeader toggle={this.handleCloseModal}>{this.state.modalTitle}</ModalHeader>
                                 <ModalBody>
@@ -204,12 +218,14 @@ class Activities extends Component {
                                         id={this.state.id}
                                         name={this.state.name}
                                         customer={this.state.customer}
+                                        project={this.state.project}
                                         date={this.state.date}
                                         duration={this.state.duration}
                                         explanation={this.state.explanation}
                                         customers={this.props.customers}
+                                        projects={this.state.projects}
                                         submitHandler={this.submitHandler}
-                                        changeHandler={this.changeHandler} />
+                                        changeHandler={this.changeHandler}/>
                                 </ModalBody>
                             </Modal>
                             <MDBDataTableV5
@@ -246,7 +262,8 @@ function mapStateToProps(state, ownProps) {
     return {
         activity,
         customers: state.customerListReducer,
-        activities: state.activityListReducer
+        activities: state.activityListReducer,
+        projects: state.projectListReducer
     }
 }
 
@@ -254,8 +271,9 @@ function mapDispatchToProps(dispatch) {
     return {
         actions: {
             getCustomers: bindActionCreators(customerActions.getCustomers, dispatch),
+            getProjects: bindActionCreators(projectActions.getProjects, dispatch),
             getActivities: bindActionCreators(activityActions.getActivities, dispatch),
-            saveActivity: bindActionCreators(activityActions.saveActivity, dispatch)
+            saveActivity: bindActionCreators(activityActions.saveActivity, dispatch),
         }
     }
 }

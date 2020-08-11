@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux';
 import * as customerActions from '../../redux/actions/customerActions';
 import { MDBCol, MDBBtn, MDBRow } from 'mdbreact';
 
-const ActivityModal = ({ name, customer, project, date, duration, explanation, customers, projects, submitHandler, changeHandler }) => {
+const ActivityModal = ({ projectName, customerId, city, sector, status, customers, submitHandler, changeHandler }) => {
     return (
         <div>
             <form
@@ -13,26 +13,26 @@ const ActivityModal = ({ name, customer, project, date, duration, explanation, c
                 noValidate>
                 <MDBRow>
                     <MDBCol md="12" className="mb-3">
-                        <label htmlFor="name" className="grey-text">Activity Name</label>
+                        <label htmlFor="projectName" className="grey-text">Project Name</label>
                         <input
-                            value={name}
+                            value={projectName}
                             onChange={changeHandler}
                             type="text"
-                            id="name"
-                            name="name"
+                            id="projectName"
+                            name="projectName"
                             className="form-control"
                             required />
-                        <div className="invalid-tooltip right">Please enter activity name.</div>
+                        <div className="invalid-tooltip right">Please enter project name.</div>
                     </MDBCol>
                 </MDBRow>
                 <MDBRow>
                     <MDBCol md="12" className="mb-3">
-                        <label htmlFor="customer" className="grey-text">Customer</label>
+                        <label htmlFor="customerId" className="grey-text">Customer</label>
                         <select
-                            value={customer}
+                            value={customerId}
                             onChange={changeHandler}
-                            id="customer"
-                            name="customer"
+                            id="customerId"
+                            name="customerId"
                             className="form-control"
                             required>
                             <option value="">Select Customer</option>
@@ -47,74 +47,55 @@ const ActivityModal = ({ name, customer, project, date, duration, explanation, c
                         <div className="invalid-tooltip right">Please select customer.</div>
                     </MDBCol>
                 </MDBRow>
-
                 <MDBRow>
                     <MDBCol md="12" className="mb-3">
-                        <label htmlFor="project" className="grey-text">Project</label>
-                        <select
-                            value={project}
+                        <label htmlFor="city" className="grey-text">City</label>
+                        <input
+                            value={city}
                             onChange={changeHandler}
-                            id="project"
-                            name="project"
+                            type="text"
+                            id="city"
+                            name="city"
+                            className="form-control"
+                            required />
+                        <div className="invalid-tooltip right">Please enter a city.</div>
+                        {/* <div className="valid-tooltip">Looks good!</div> */}
+                    </MDBCol>
+                </MDBRow>
+                <MDBRow>
+                    <MDBCol md="12" className="mb-3">
+                        <label htmlFor="sector" className="grey-text">Sector</label>
+                        <input
+                            value={sector}
+                            onChange={changeHandler}
+                            type="text"
+                            id="sector"
+                            name="sector"
+                            className="form-control"
+                            required />
+                        <div className="invalid-tooltip">Please enter a sector.</div>
+                    </MDBCol>
+                </MDBRow>
+                <MDBRow>
+                    <MDBCol md="12" className="mb-3">
+                    <label htmlFor="status" className="grey-text">Status</label>
+                        <select
+                            value={status}
+                            onChange={changeHandler}
+                            id="status"
+                            name="status"
                             className="form-control"
                             required>
-                            <option  value="">Select Project</option>
-                            {projects.map(project => {
-                                return (
-                                    <option key={project.id} value={project.id}>
-                                        {project.projectName}
-                                    </option>
-                                )
-                            })}
+                            <option value=""></option>
+                            <option value="Active">Active</option>
+                            <option value="Passive">Passive</option>
                         </select>
-                        <div className="invalid-tooltip right">Please select customer.</div>
-                    </MDBCol>
-                </MDBRow>
-                <MDBRow>
-                    <MDBCol md="12" className="mb-3">
-                        <label htmlFor="date" className="grey-text">Activity Date</label>
-                        <input
-                            value={date}
-                            onChange={changeHandler}
-                            type="date"
-                            id="date"
-                            name="date"
-                            className="form-control"
-                            required />
-                        <div className="invalid-tooltip">Please enter a valid date.</div>
-                    </MDBCol>
-                </MDBRow>
-                <MDBRow>
-                    <MDBCol md="12" className="mb-3">
-                        <label htmlFor="duration" className="grey-text">Duration</label>
-                        <input
-                            value={duration}
-                            onChange={changeHandler}
-                            type="text"
-                            id="duration"
-                            name="duration"
-                            className="form-control"
-                            required />
-                        <div className="invalid-tooltip">Please enter a valid duration.</div>
-                    </MDBCol>
-                </MDBRow>
-                <MDBRow>
-                    <MDBCol md="12" className="mb-3">
-                        <label htmlFor="explanation" className="grey-text">Explanation</label>
-                        <textarea
-                            rows="3"
-                            value={explanation}
-                            onChange={changeHandler}
-                            type="text"
-                            id="explanation"
-                            name="explanation"
-                            className="form-control"
-                            required />
-                        <div className="invalid-tooltip">Please enter a explanation.</div>
+                        <div className="invalid-tooltip">Please select a status.</div>
+                        {/* <div className="valid-tooltip">Looks good!</div> */}
                     </MDBCol>
                 </MDBRow>
                 <div className='text-center mt-4'>
-                    <MDBBtn color="primary" type="submit">Save Activity</MDBBtn>
+                    <MDBBtn color="primary" type="submit">Save Project</MDBBtn>
                 </div>
             </form>
         </div>
